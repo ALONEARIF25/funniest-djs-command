@@ -1,0 +1,16 @@
+//Config =>
+
+const user = '741639648744570972'
+const token = process.env['token']
+
+//___________________________________\\
+const Discord = require('discord.js')
+const client = new Discord.Client()
+
+client.on('message', message => {
+  if(message.author == user) {
+message.delete()
+  }
+})
+
+client.login(token)
